@@ -12,17 +12,20 @@ class PostController extends Controller
   {
     if($c = request()['cat']) {
       $cat = Category::find($c);
-      $posts = $cat->posts;
+      $posts = $cat->posts()->latest()->paginate(10);
       $heading = " in category << $cat->name >>";
+      $type = ['cat' => $cat->id];
     } elseif($t = request()['tag']) {
       $tag = Tag::find($t);
-      $posts = $tag->posts;
+      $posts = $tag->posts()->latest()->paginate(10);
       $heading = " with tag << $tag->tag >>";
+      $type = ['tag' => $tag->id];
     } else {
-      $posts = Post::latest()->get();
+      $posts = Post::latest()->paginate(10);
       $heading = '';
+      $type = [];
     }
-     return view('admin.posts.index', compact('posts', 'heading'));
+     return view('admin.posts.index', compact('posts', 'heading', 'type'));
   }
 
   public function create()

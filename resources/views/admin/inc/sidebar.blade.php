@@ -1,4 +1,5 @@
 <ul class="list-group">
+  <li class="list-group-item"><a href="{{route('feposts.index')}}">Home Page</a></li>
   <li class="list-group-item"><a href="{{route('dashboard')}}">Dashboard</a></li>
   <li class="list-group-item"><a href="{{route('profile.editProfile', auth()->user())}}">My Profile</a></li>
   <li class="list-group-item"><a href="{{route('posts.create')}}">Create Post</a></li>
