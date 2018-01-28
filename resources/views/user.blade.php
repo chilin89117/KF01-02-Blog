@@ -4,7 +4,7 @@
   <div class="content-wrapper">
     <div class="stunning-header stunning-header-bg-lightviolet">
       <div class="stunning-header-content">
-        <p class="stunning-header-title">Category: {{$category->name}}</p>
+        <p class="stunning-header-title">Author: {{$user->name}}</p>
       </div>
     </div>
     <div class="container">
@@ -26,7 +26,7 @@
             </div>
             @endforeach
           @else
-          <h3>There are no posts in this category.</h3>
+          <h3>This author has not created any posts.</h3>
           @endif
         </div>
         <div class="row medium-padding25">
@@ -34,15 +34,15 @@
             <aside aria-label="sidebar" class="sidebar sidebar-right">
               <div  class="widget w-tags">
                 <div class="heading text-center">
-                  <p class="h5 heading-title">Tags</p>
+                  <p class="h5 heading-title">Categories</p>
                   <div class="heading-line">
                     <span class="short-line"></span>
                     <span class="long-line"></span>
                   </div>
                 </div>
                 <div class="tags-wrap">
-                  @foreach($tags as $tag)
-                  <a href="{{route('feposts.tag', $tag)}}" class="w-tags-item">{{$tag->tag}}</a>
+                  @foreach($all_categories as $cat)
+                  <a href="{{route('feposts.category', $cat)}}" class="w-tags-item">{{$cat->name}}</a>
                   @endforeach
                 </div>
               </div>

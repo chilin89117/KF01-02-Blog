@@ -4,6 +4,7 @@ Route::get('/', 'FrontendController@index');
 Route::group(['prefix'=>'feposts'], function() {
   Route::get('category/{category}', 'FrontendController@category')->name('feposts.category');
   Route::get('tag/{tag}', 'FrontendController@tag')->name('feposts.tag');
+  Route::get('user/{user}', 'FrontendController@user')->name('feposts.user');
   Route::post('search', 'FrontendController@search')->name('feposts.search');
   Route::post('subscribe', 'FrontendController@subscribe')->name('feposts.subscribe');
 });

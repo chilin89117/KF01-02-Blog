@@ -34,7 +34,7 @@
             <aside aria-label="sidebar" class="sidebar sidebar-right">
               <div  class="widget w-tags">
                 <div class="heading text-center">
-                  <p class="h5 heading-title">ALL BLOG CATEGORIES</p>
+                  <p class="h5 heading-title">Categories</p>
                   <div class="heading-line">
                     <span class="short-line"></span>
                     <span class="long-line"></span>

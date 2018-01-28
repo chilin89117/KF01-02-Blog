@@ -9,7 +9,7 @@
         <div class="post-additional-info">
           <div class="post__author author vcard">Posted by
             <div class="post__author-name fn">
-              <a href="#" class="post__author-link">{{$post->user->name}}</a>
+              <a href="{{route('feposts.user', $post->user->id)}}" class="post__author-link">{{$post->user->name}}</a>
             </div>
           </div>
           <span class="post__date">
@@ -29,7 +29,7 @@
           <div class="widget w-tags">
             <div class="tags-wrap">
               @foreach($post->tags as $tag)
-              <a href="{{(route('feposts.tag', $tag))}}" class="w-tags-item">{{$tag->tag}}</a>
+              <a href="{{route('feposts.tag', $tag)}}" class="w-tags-item">{{$tag->tag}}</a>
               @endforeach
             </div>
           </div>

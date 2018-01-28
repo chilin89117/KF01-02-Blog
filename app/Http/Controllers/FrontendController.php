@@ -7,6 +7,7 @@ use App\Setting;
 use App\Category;
 use App\Post;
 use App\Tag;
+use App\User;
 
 class FrontendController extends Controller
 {
@@ -59,6 +60,16 @@ class FrontendController extends Controller
     $all_categories = Category::orderBy('name')->get();
     return view('tag', compact('settings', 'categories', 'tag',
                                'posts', 'all_categories'));
+  }
+
+  public function user(User $user)
+  {
+    $settings = Setting::first();
+    $categories = Category::take(5)->get();
+    $posts = $user->posts()->latest()->get();
+    $all_categories = Category::orderBy('name')->get();
+    return view('user', compact('settings', 'categories', 'user',
+                                'posts', 'all_categories'));
   }
 
   public function search(Request $request)

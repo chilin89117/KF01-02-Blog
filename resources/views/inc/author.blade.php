@@ -4,7 +4,9 @@
   </div>
   <div class="blog-details-author-content">
     <div class="author-info">
-      <h5 class="author-name">{{$post->user->name}}</h5>
+      <h5 class="author-name">
+        <a href="{{route('feposts.user', $post->user)}}">{{$post->user->name}}</a>
+      </h5>
       <p class="author-info">{{$post->user->profile->title}}</p>
     </div>
     <p class="text">{{$post->user->profile->about}}</p>
