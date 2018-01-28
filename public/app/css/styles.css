@@ -959,68 +959,88 @@ h6, .h6 {
   border-radius: 50px;
   position: relative;
   transition: all .3s ease;
-  text-align: center; }
-  @media (max-width: 768px) {
-    .btn {
-      padding: 15px 35px;
-      font-size: 13px; } }
-  .btn + .btn {
-    margin-left: 30px; }
-  .btn img {
-    position: absolute;
-    left: 10px;
-    top: 10px; }
-  .btn i {
-    margin-left: 10px;
-    font-size: 12px; }
-  .btn:after {
-    display: block;
-    width: 100%;
-    height: 100%; }
-
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .btn {
+    padding: 15px 35px;
+    font-size: 13px;
+  }
+}
+.btn + .btn {
+  margin-left: 30px;
+}
+.btn img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.btn i {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.btn:after {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .btn-small {
   padding: 15px 35px;
   text-transform: none;
-  font-size: 16px; }
-
+  font-size: 16px;
+}
 .btn-medium {
-  padding: 23px 31px; }
-  @media (max-width: 768px) {
-    .btn-medium {
-      padding: 15px 25px;
-      font-size: 13px; } }
-
+  padding: 23px 31px;
+}
+ @media (max-width: 768px) {
+  .btn-medium {
+    padding: 15px 25px;
+    font-size: 13px;
+  }
+}
 .btn-large {
   padding: 27px 64px;
-  font-size: 18px; }
-  @media (max-width: 768px) {
-    .btn-large {
-      padding: 17px 40px;
-      font-size: 13px; } }
-
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .btn-large {
+    padding: 17px 40px;
+    font-size: 13px;
+  }
+}
 .btn-border {
-  border: 2px solid; }
+  border: 2px solid;
+}
+.btn-border.btn-small {
+  padding: 12px 35px;
+}
+@media (max-width: 768px) {
   .btn-border.btn-small {
-    padding: 12px 35px; }
-    @media (max-width: 768px) {
-      .btn-border.btn-small {
-        padding: 15px 25px; } }
+    padding: 15px 25px;
+  }
+}
+.btn-border.btn-medium {
+  padding: 21px 34px;
+}
+@media (max-width: 768px) {
   .btn-border.btn-medium {
-    padding: 21px 34px; }
-    @media (max-width: 768px) {
-      .btn-border.btn-medium {
-        padding: 15px 25px; } }
+    padding: 15px 25px;
+  }
+}
+.btn-border.btn-large {
+  padding: 25px 64px;
+}
+@media (max-width: 768px) {
   .btn-border.btn-large {
-    padding: 25px 64px; }
-    @media (max-width: 768px) {
-      .btn-border.btn-large {
-        padding: 17px 40px; } }
-
+    padding: 17px 40px;
+  }
+}
 .c-primary {
-  color: #4cc2c0; }
-  .c-primary .semicircle:after {
-    border-color: #4cc2c0; }
-
+  color: #4cc2c0;
+}
+.c-primary .semicircle:after {
+  border-color: #4cc2c0;
+}
 .semicircle {
   display: block;
   position: absolute;
@@ -1028,27 +1048,32 @@ h6, .h6 {
   left: 12px;
   width: 18px;
   height: 18px;
-  overflow: hidden; }
-  @media (max-width: 768px) {
-    .semicircle {
-      top: 10px;
-      left: 10px;
-      width: 12px;
-      height: 12px; } }
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .semicircle {
+    top: 10px;
+    left: 10px;
+    width: 12px;
+    height: 12px;
+  }
+}
+.semicircle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+@media (max-width: 768px) {
   .semicircle:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    border: 2px solid #fff;
-    border-radius: 100%; }
-    @media (max-width: 768px) {
-      .semicircle:after {
-        width: 20px;
-        height: 20px;
-        border: 1px solid #fff; } }
-
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+  }
+}
 .semicircle--right {
   display: block;
   position: absolute;
@@ -1056,17 +1081,17 @@ h6, .h6 {
   right: 12px;
   width: 18px;
   height: 18px;
-  overflow: hidden; }
-  .semicircle--right:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    border: 2px solid #fff;
-    border-radius: 100%;
-    right: 0; }
-
+  overflow: hidden;
+}
+.semicircle--right:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  right: 0;}
 /*------------- #Color-scheme for buttons --------------*/
 .btn--dark {
   background-color: #2f2c2c; }
@@ -7894,7 +7919,7 @@ form.w-search {
   border: 2px solid #dddede;
   border-radius: 50px;
   margin-right: 10px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   float: left;
   transition: all .3s ease;
 }

@@ -42,7 +42,7 @@
                 </div>
                 <div class="tags-wrap">
                   @foreach($all_categories as $cat)
-                  <a href="{{route('feposts.category', $cat)}}" class="w-tags-item">{{$cat->name}}</a>
+                  <a href="{{route('feposts.category', $cat)}}">{{$cat->name}}</a>
                   @endforeach
                 </div>
               </div>

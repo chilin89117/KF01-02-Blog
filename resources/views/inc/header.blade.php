@@ -20,8 +20,29 @@
         </a>
         <ul class="primary-menu-menu" style="overflow: hidden;">
           @foreach($categories as $cat)
-          <li class=""><a href="{{route('feposts.category', $cat)}}">{{$cat->name}}</a></li>
+          <li><a href="{{route('feposts.category', $cat)}}">{{$cat->name}}</a></li>
           @endforeach
+          @auth
+          <li>
+            <div class="widget w-tags">
+              <div class="tags-wrap">
+                <a href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="w-tags">Logout</a>
+              </div>
+            </div>
+          </li>
+          <form id="logout-form" action="{{route('logout')}}" method="post">
+            {{csrf_field()}}
+          </form>
+          @else
+          <li>
+            <div class="widget w-tags">
+              <div class="tags-wrap">
+                <a href="{{route('login')}}">Login</a>
+                <a href="{{route('register')}}">Register</a>
+              </div>
+            </div>
+          </li>
+          @endauth
         </ul>
       </nav>
       <ul class="nav-add">

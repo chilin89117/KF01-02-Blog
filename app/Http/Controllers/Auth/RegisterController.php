@@ -1,6 +1,5 @@
 <?php
 namespace App\Http\Controllers\Auth;
-
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -10,12 +9,10 @@ class RegisterController extends Controller
 {
   use RegistersUsers;
 
-  protected $redirectTo = '/admin/dashboard';
+  protected $redirectTo = '/admin';
 
   public function __construct()
-  {
-    $this->middleware('guest');
-  }
+  { $this->middleware('guest'); }
 
   protected function validator(array $data)
   {

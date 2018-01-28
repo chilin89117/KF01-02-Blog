@@ -42,7 +42,7 @@
                 </div>
                 <div class="tags-wrap">
                   @foreach($tags as $tag)
-                  <a href="{{route('feposts.tag', $tag)}}" class="w-tags-item">{{$tag->tag}}</a>
+                  <a href="{{route('feposts.tag', $tag)}}">{{$tag->tag}}</a>
                   @endforeach
                 </div>
               </div>
