@@ -23,8 +23,7 @@
   - Update database connection info
 - Run `php artisan migrate`
 - Seed the database
-  - On Mac, `default.jpg` and `default-post.png` should have '777' permissions and be owned by `daemon:staff`
-  - On Windows 10, this is not necessary
+  - `default.jpg` and `default-post.png` should have '777' permissions on Mac, but not necessary on Windows
   - Run `php artisan db:seed`
 - Run `php artisan storage:link`
 - Set up Apache web server

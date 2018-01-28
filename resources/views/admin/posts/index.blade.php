@@ -11,22 +11,22 @@
           <th>Image</th>
           <th>Title</th>
           <th>Author</th>
-          <th>Edit</th>
-          <th>Delete?</th>
+          <th style="text-align:center">Edit</th>
+          <th style="text-align:center">Delete?</th>
         </tr>
       </thead>
       <tbody>
         @foreach($posts as $post)
         <tr>
           <td><img src="{{asset($post->featured)}}" height="42" width="28 "alt="{{$post->title}}"></td>
-          <td>{{str_limit($post->title, 40)}}</td>
-          <td>{{$post->user->name}}</td>
-          <td>
+          <td style="padding-top:15px">{{str_limit($post->title, 40)}}</td>
+          <td style="padding-top:15px">{{$post->user->name}}</td>
+          <td style="padding-top:15px;text-align:center">
             <a href="{{route('posts.edit', $post)}}" class="btn btn-info btn-xs">
               <i class="fa fa-pencil"></i>&nbsp;&nbsp;Edit
             </a>
           </td>
-          <td>
+          <td style="padding-top:15px;text-align:center">
             <form action="{{route('posts.destroy', $post)}}" method="post">
               {{csrf_field()}}
               {{method_field('delete')}}

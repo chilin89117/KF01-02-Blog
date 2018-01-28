@@ -8,7 +8,7 @@
   <li class="list-group-item"><a href="{{route('posts.trashed')}}">Trashed Posts</a></li>
   <li class="list-group-item"><a href="{{route('categories.index')}}">Categories</a></li>
   <li class="list-group-item"><a href="{{route('tags.index')}}">Tags</a></li>
-  <li class="list-group-item"><a href="{{route('users.index')}}">Registered Users</a></li>
+  <li class="list-group-item"><a href="{{route('users.index')}}">Active Users</a></li>
   <li class="list-group-item"><a href="{{route('users.create')}}">Create User</a></li>
   <li class="list-group-item"><a href="{{route('settings.edit')}}">Edit Settings</a></li>
   @endif

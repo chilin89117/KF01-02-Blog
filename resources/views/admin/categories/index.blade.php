@@ -14,11 +14,12 @@
     </form>
     <hr>
     @if($categories->count() > 0)
-    <table class="table table-hover">
+    <table class="table table-condensed table-hover">
       <thead>
         <tr>
           <th>Category Name</th>
-          <th>Show Posts</th>
+          <th>Posts</th>
+          <th>Show?</th>
           <th>Edit?</th>
           <th>Delete?</th>
         </tr>
@@ -27,6 +28,7 @@
         @foreach($categories as $cat)
         <tr>
           <td>{{$cat->name}}</td>
+          <td>{{$cat->posts->count()}}</td>
           <td>
             <a href="{{route('posts.index', ['cat' => $cat->id])}}" class="btn btn-primary btn-xs">
               <i class="fa fa-files-o"></i>&nbsp;&nbsp;Show

@@ -14,11 +14,12 @@
     </form>
     <hr>
     @if($tags->count() > 0)
-    <table class="table table-hover">
+    <table class="table table-condensed table-hover">
       <thead>
         <tr>
           <th>Tag Name</th>
-          <th>Show Posts</th>
+          <th>Posts</th>
+          <th>Show?</th>
           <th>Edit?</th>
           <th>Delete?</th>
         </tr>
@@ -27,6 +28,7 @@
         @foreach($tags as $tag)
         <tr>
           <td>{{$tag->tag}}</td>
+          <td>{{$tag->posts->count()}}</td>
           <td>
             <a href="{{route('posts.index', ['tag' => $tag->id])}}" class="btn btn-primary btn-xs">
               <i class="fa fa-files-o"></i>&nbsp;&nbsp;Show
